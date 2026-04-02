@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمة التصاميم الإبداعية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8); 
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #1e293b;
+            margin: 15% auto;
+            padding: 30px;
+            border: 2px solid #38bdf8;
+            width: 90%;
+            max-width: 400px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            animation: slideDown 0.4s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: #94a3b8;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover { color: #fff; }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .contact-item {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #38bdf8;
+            font-weight: bold;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #232f44;
+            border-color: #38bdf8;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">المبرمج <span>عزام</span></a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">العودة للرئيسية</a></li>
+        </ul>
+    </nav>
+
+    <section class="service-details">
+        <div class="container" style="max-width: 800px; margin: 50px auto; padding: 20px; text-align: center;">
+            <i class="fas fa-palette" style="font-size: 5rem; color: #38bdf8; margin-bottom: 20px;"></i>
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">تصاميم الهوية البصرية والشعارات</h1>
+            
+            <div class="description" style="text-align: right; background: #1e293b; padding: 30px; border-radius: 15px; line-height: 2; color: #cbd5e1; border: 1px solid #334155;">
+                <p>نقدم خدمة تصميم احترافية وشاملة لمنصات التواصل الاجتماعي والسيرفرات، مع التركيز على الستايلات الحديثة مثل الـ 3D والكروم والخطوط العربية المزخرفة لتمييز حضورك الرقمي.</p>
+                <ul style="margin-top: 20px; list-style: circle; padding-right: 20px;">
+                    <li>تصميم شعارات (Logos) فريدة بأسلوب الكروم و 3D.</li>
+                    <li>تصميم بنرات احترافية لقنوات اليوتيوب وسيرفرات الديسكورد.</li>
+                    <li>كتابة وتصميم المخطوطات العربية بلمسة فنية فاخرة.</li>
+                    <li>تنسيق كامل للهوية البصرية (ألوان، خطوط، أيقونات).</li>
+                    <li>تصميم صور مصغرة (Thumbnails) ملفتة للانتباه.</li>
+                </ul>
+            </div>
+
+            <div class="order-section" style="margin-top: 50px; background: #38bdf8; padding: 40px; border-radius: 15px; color: #0f172a;">
+                <h2>هل تريد تصميماً إبداعياً؟</h2>
+                <p>اضغط على الزر أدناه للحصول على معلومات التواصل ومناقشة مشروعك القادم.</p>
+                <br>
+                <button id="orderBtn" class="btn" style="background: #0f172a; color: white; border: none; font-family: 'Cairo'; cursor: pointer;">اطلب التصميم الآن</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="color: #fff;">معلومات التواصل</h2>
+            <p style="color: #94a3b8;">اضغط على الوسيلة المفضلة لديك:</p>
+            
+            <div class="contact-info">
+                <a href="https://wa.me/966578550197" target="_blank" class="contact-link">
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>واتساب</span>
+                    </div>
+                </a>
+
+                <a href="https://discord.gg/mZqTnsrz4b" target="_blank" class="contact-link">
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <span>ديسكورد</span>
+                    </div>
+                </a>
+            </div>
+            
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #64748b;">سأقوم بالرد عليك لمناقشة تفاصيل التصميم!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026</p>
+    </footer>
+
+    <script>
+        var modal = document.getElementById("contactModal");
+        var btn = document.getElementById("orderBtn");
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
